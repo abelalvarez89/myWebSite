@@ -1,0 +1,39 @@
+p
+{
+	font:20px tahoma;
+	color: blue;
+}
+#mainDiv
+{
+	background: skyblue;
+	width: 350px;
+	height: 225px;
+	margin: 100px auto;
+	box-shadow: 10px 10px 50px grey;
+	padding-top: 15px;
+	
+}
+input[type="button"]
+{
+	
+	width: 133px;
+	height: 30px;
+	opacity: 0.8;
+	border: 1px;
+}
+input[type="text"]
+{
+	font:15px tahoma;
+	width: 220px;
+	background:black;
+	color: red;
+}
+input[type="number"], input[type="select"]
+{
+	font: 16px tahoma;
+	width: 30px;
+	height: 20px;
+	opacity: 0.8;
+	border: 0px;
+
+}

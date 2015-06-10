@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+	<title>Quadratic Equation</title>
+	<meta name="viewport" content="width=device-width; initial-scale=1.3; maximum-scale=1.3; user-scalable=0;"/>
+	<link rel="stylesheet" type="text/css" href="Quadratic/design.css"/>
+	
+</head>
+<body>
+	<div id="mainDiv" align="center">
+	<p>Quadratic Equation</p>
+		<form>
+			<table align="center">
+				<tr>
+					<td>
+						<select id="sign1">
+							<option  value="+">+</option>
+							<option  value="-">-</option>
+						</select>
+						<input type="number" id="xSquare" value="1">
+						X^2
+						<select id="sign2">
+							<option value="+">+</option>
+							<option value="-">-</option>
+						</select>
+						<input type="number" id="xNumber" value="1">
+						X
+						<select id="sign3">
+							<option value="+">+</option>
+							<option value="-">-</option>
+						</select>
+						<input type="number" id="number" value="1">
+					</td>
+				</tr>
+			</table>
+			<center>
+				<input type="button" value="Quadratic Equation" id="quadratic" onclick="quadraticEquation()">
+				<input type="button" value="Foil" id="foil" onclick="solveFoil()">
+			<br></br>
+			<input type="text" value="X1 = " id="answer1" readonly></input><tr></tr>
+			<input type="text" value="X2 = " id="answer2" readonly></input>
+			
+				</center>
+			
+		</form>
+	</div>
+	<script src="Quadratic/script.js">
+	
+	</script>
+</body>
+</HTML>

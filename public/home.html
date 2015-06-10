@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="slideShow/flexslider.css" type="text/css" media="screen" />
+	<script src="slideShow/demo/js/modernizr.js"></script>
+    <title>Home</title>
+	
+	<body class="loading">
+
+  <div id="container" class="cf">
+    
+
+	<div id="main" role="main">
+      <section class="slider">
+        <div class="flexslider">
+          <ul class="slides">
+            <li>
+  	    	    <img src="../images/papi2.png" />
+  	    		</li>
+  	    		<li>
+  	    	    <img src="../images/bshowerFriends.jpg" />
+  	    		</li>
+  	    		<li>
+  	    	    <img src="../images/cake1.jpg" />
+  	    		</li>
+  	    		<li>
+  	    	    <img src="../images/cosaRed1.jpg" />
+  	    		</li>
+          </ul>
+        </div>
+      </section>
+     
+    </div>
+
+  </div>
+
+  <!-- jQuery -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+
+  <!-- FlexSlider -->
+  <script defer src="slideShow/jquery.flexslider.js"></script>
+
+  <script type="text/javascript">
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+
+
+  <!-- Syntax Highlighter -->
+  <script type="text/javascript" src="slideShow/demo/js/shCore.js"></script>
+  <script type="text/javascript" src="slideShow/demo/js/shBrushXml.js"></script>
+  <script type="text/javascript" src="slideShow/demo/js/shBrushJScript.js"></script>
+
+  <!-- Optional FlexSlider Additions -->
+  <script src="slideShow/demo/js/jquery.easing.js"></script>
+  <script src="slideShow/demo/js/jquery.mousewheel.js"></script>
+  <script defer src="slideShow/demo/js/demo.js"></script>
+
+</body>
+	<!--
+	<h3>Photo Gallery</h3>
+	
+	<article class="col-lg-12 col-md-12>
+	
+		<div class="row">
+			<div class="col-xs-4">
+				<div class="thumbnail">
+					<img src="images/cosa.jpg" alt="" class="img-responsive">
+					<a href="images/cosa.jpg">Pic 1</a>
+				</div>
+            </div>
+			<div class="col-xs-4">
+				<div class="thumbnail">
+					<img src="images/cosa1.jpg" alt="" class="img-responsive">
+					<a href="images/cosa1.jpg">Pic 2</a>
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<div class="thumbnail">
+					<img src="images/cosaRed.jpg" alt="" class="img-responsive">
+					<a href="images/cosaRed.jpg">Pic 3</a>
+				</div>
+			</div>
+		
+			<div class="col-xs-4">
+				<div class="thumbnail">
+					<img src="images/bshowerFamily.jpg" alt="" class="img-responsive">
+					<a href="images/bshowerFamily.jpg">Pic 4</a>
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<div class="thumbnail">
+					<img src="images/cake.jpg" alt="" class="img-responsive">
+					<a href="images/cake.jpg">Pic 5</a>
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<div class="thumbnail">
+					<img src="images/bshowerFriends.jpg" alt="" class="img-responsive">
+					<a href="images/bshowerFriends.jpg">Pic 6</a>
+				</div>
+			</div>
+		
+			<div class="col-xs-4">
+				<div class="thumbnail">
+					<img src="images/hand.jpg" alt="" class="img-responsive"> 
+					<a href="images/hand.jpg">Pic 7</a>
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<div class="thumbnail">
+					<img src="images/papi3.jpg" alt="" class="img-responsive"> 
+					<a href="images/papi3.jpg">Pic 8</a>
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<div class="thumbnail">
+					<img src="images/papiSanto.jpg" alt="" class="img-responsive">
+					<a href="images/papiSanto.jpg">Pic 9</a>					
+				</div>
+			</div>
+			<div class="col-xs-1">
+			</div>
+			<div class="col-xs-10">
+				<div class="embed-container">
+					<iframe width="420" height="315" src="//www.youtube.com/embed/IgDYjLzhgpw" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	
+	</article>
+	-->
+</html>
