@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html ng-app="app">
-<section ng-class="tab = 1" ng-controller="PanelController as panel">
+<section ng-controller="PanelController as panel">
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,16 +22,16 @@
 			</div>
 			<div class="collapse navbar-collapse" id="collapse">
 				<ul class="nav navbar-nav nav-tabs nav-justified">
-					<li ><a ng-click="tab = 1" href = "index.html?page=home" >Home</a></li>
-					<li ><a ng-click="tab = 2" href="index.html?page=about" >About</a></li>
-					<li ><a ng-click="tab = 3" href="index.html?page=projects" >Projects</a></li>
+					<li ng-class="{active:panel.isSelected(1)}"><a ng-click="panel.selectTab(1)" href >Home</a></li>
+					<li ng-class="{active:panel.isSelected(2)}"><a ng-click="panel.selectTab(2)" href>About</a></li>
+					<li ng-class="{active:panel.isSelected(3)}"><a ng-click="panel.selectTab(3)" href>Projects</a></li>
 					<li class="dropdown"><a href="#" data-toggle="dropdown">Downloads<span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li ><a href="index.html?page=downloads">All downloads</a></li>
+						<ul ng-class="{active:panel.isSelected(4)}" class="dropdown-menu">
+							<li ><a ng-click="panel.selectTab(4)" href>All downloads</a></li>
 							<li class="divider"></li>
-							<li><a ng-click="tab = 4" href="Downloads/citizenshipZip.php">Citizenship</a></li>
-							<li><a ng-click="tab = 5" href="Downloads/findDifference.php">Find Difference</a></li>
-							<li><a ng-click="tab = 6" href="Downloads/equations.php">Equations</a></li>
+							<li><a href="Downloads/citizenshipZip.php">Citizenship</a></li>
+							<li><a href="Downloads/findDifference.php">Find Difference</a></li>
+							<li><a href="Downloads/equations.php">Equations</a></li>
 						</ul>
 
 					</li>
@@ -41,42 +41,50 @@
 							<li><a ng-click="tab = 8" href="index.html?page=quadratic">Quadratic Equation</a></li>
 						</ul>
 					</li>
-					<li ><a ng-click="tab = 9" href="index.html?page=teaching" >Teaching</a></li>
-					<li ><a ng-click="tab = 10" href="index.html?page=contact" >Contact</a></li>
+					<li ng-class="{active:panel.isSelected(9)}"><a ng-click="panel.selectTab(9)" href >Teaching</a></li>
+					<li ng-class="{active:panel.isSelected(10)}"><a ng-click="panel.selectTab(10)" href >Contact</a></li>
 					
 				</ul>
 			</div>
 		</nav>
 	</div>
-	
-	
 </head>
 <body>
-<?php include_once("Downloads/googleAnalytics.php") ?>
     <div class="container">
 		<header class="row">
-			<h1>Abel Alvarez</h1>
+			<h1></h1>
 		</header>
-		{{tab}}	
-
-		<div class="panel">
-		<h4>testing 1</h4>
+		
+		<div class="panel" ng-show="panel.isSelected(1)">
+			<home-page></home-pabe>
 		</div>
-		<div class="panel">
-		<h4>testing 2</h4>
+		<div class="panel" ng-show="panel.isSelected(2)">
+			<about-page></about-page>
+		</div>
+		<div class="panel" ng-show="panel.isSelected(3)">
+			<projects-page></projects-page>
+		</div>
+		<div class="panel" ng-show="panel.isSelected(4)">
+			<downloads-page></downloads-page>
+		</div>
+		<div class="panel" ng-show="panel.isSelected(5)">
+			<tools-page></tools-page>
+		</div>
+		<div class="panel" ng-show="panel.isSelected(9)">
+			<teaching-page></teaching-page>
+		</div>
+		<div class="panel" ng-show="panel.isSelected(10)">
+			<contact-page></contact-page>
 		</div>
 		
 		<br></br>
-		<!-- <div align='center'><a href='http://www.hit-counter-html-code.com'><img src='http://www.hit-counter-html-code.com/c.php?d=4&id=129031&s=18' border='0' title='free website hit counter'></a><br / ><small><a href='#' title="hit counter html code">Views</a></small></div>
--->
 
-		<footer class="row">    
-			Copyright 2015 <a href="http://www.abelalvarez.info/"><strong>Abel Alvarez</strong></a> | <a href="http://www.abelalvarez.info/" target="_parent">Production</a> by <a href="https://www.linkedin.com/pub/abel-alvarez/87/975/998" target="_parent">Abel Alvarez</a>
-		</footer> <!-- end of footer -->
 	</div><!-- END CONTAINER -->
-<!-- JAVASCRIPT -->
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </body>
+<footer class="row">
+	Copyright 2015 <a href="http://www.abelalvarez.info/"><strong>Abel Alvarez</strong></a> | <a href="http://www.abelalvarez.info/" target="_parent">Production</a> by <a href="https://www.linkedin.com/pub/abel-alvarez/87/975/998" target="_parent">Abel Alvarez</a>
+</footer>
 </section>
 </html>
