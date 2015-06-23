@@ -1,15 +1,20 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html ng-app="app">
+<html ng-app="pages">
 <section ng-controller="PanelController as panel">
+
 <head>
 	<meta charset="utf-8">
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="lib/angular/angular.min.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="Expenses/css/customTable.css"/>
+    
+	<script type="text/javascript" src="lib/angular/angular.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
+    
     <script src="js/response.min.js"></script>
-    <title>Abel Alvarez</title>
 	<div class="row">
 		<nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
 			<div class="navbar-header">
@@ -23,7 +28,7 @@
 			<div class="collapse navbar-collapse" id="collapse">
 				<ul class="nav navbar-nav nav-tabs nav-justified">
 					<li ng-class="{active:panel.isSelected(1)}"><a ng-click="panel.selectTab(1)" href >Home</a></li>
-					<li ng-class="{active:panel.isSelected(2)}"><a ng-click="panel.selectTab(2)" href>About</a></li>
+					<!--<li ng-class="{active:panel.isSelected(2)}"><a ng-click="panel.selectTab(2)" href>About</a></li>-->
 					<li ng-class="{active:panel.isSelected(3)}"><a ng-click="panel.selectTab(3)" href>Projects</a></li>
 					<li class="dropdown"><a href="#" data-toggle="dropdown">Downloads<span class="caret"></span></a>
 						<ul ng-class="{active:panel.isSelected(4)}" class="dropdown-menu">
@@ -35,12 +40,15 @@
 						</ul>
 
 					</li>
-					<li class="dropdown"><a href="#" data-toggle="dropdown">Tools<span class="caret"></span></a>
+					<li ng-class="{active:panel.isSelected(11)}"><a ng-click="panel.selectTab(11)" href >Expenses</a></li>
+					<!--<li class="dropdown"><a href="#" data-toggle="dropdown">Tools<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a ng-click="tab = 7" href="index.html?page=calculator">Calculator</a></li>
+							<li><a ng-click="panel.selectTab(11)" href >Expenses</a></li>
+							 <li><a ng-click="tab = 7" href="index.html?page=calculator">Calculator</a></li>
 							<li><a ng-click="tab = 8" href="index.html?page=quadratic">Quadratic Equation</a></li>
+							 
 						</ul>
-					</li>
+					</li>-->
 					<li ng-class="{active:panel.isSelected(9)}"><a ng-click="panel.selectTab(9)" href >Teaching</a></li>
 					<li ng-class="{active:panel.isSelected(10)}"><a ng-click="panel.selectTab(10)" href >Contact</a></li>
 					
@@ -59,7 +67,7 @@
 			<home-page></home-pabe>
 		</div>
 		<div class="panel" ng-show="panel.isSelected(2)">
-			<about-page></about-page>
+			<!--<about-page></about-page>-->
 		</div>
 		<div class="panel" ng-show="panel.isSelected(3)">
 			<projects-page></projects-page>
@@ -76,6 +84,9 @@
 		<div class="panel" ng-show="panel.isSelected(10)">
 			<contact-page></contact-page>
 		</div>
+		<div class="panel" ng-show="panel.isSelected(11)">
+		<expenses-page></expenses-page>
+		</div> 
 		
 		<br></br>
 
@@ -86,5 +97,6 @@
 <footer class="row">
 	Copyright 2015 <a href="http://www.abelalvarez.info/"><strong>Abel Alvarez</strong></a> | <a href="http://www.abelalvarez.info/" target="_parent">Production</a> by <a href="https://www.linkedin.com/pub/abel-alvarez/87/975/998" target="_parent">Abel Alvarez</a>
 </footer>
+
 </section>
 </html>
